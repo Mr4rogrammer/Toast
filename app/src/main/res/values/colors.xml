@@ -9,24 +9,24 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="success">#FFFFFF</color>
+    <color name="success">#95FDAC</color>
     <color name="success_left">#3EAA56</color>
 
 
-    <color name="warning">#FFFFFF</color>
+    <color name="warning">#FBD199</color>
     <color name="warning_left">#FFA62E</color>
 
 
-    <color name="information">#FFFFFF</color>
+    <color name="information">#97BFF8</color>
     <color name="information_left">#1677FF</color>
 
 
 
-    <color name="error">#FFFFFF</color>
+    <color name="error">#F8B4AE</color>
     <color name="error_left">#F54334</color>
 
 
-    <color name="message">#FFFFFF</color>
+    <color name="message">#F8E7BD</color>
     <color name="message_left">#4C4A45</color>
 
 
