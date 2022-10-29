@@ -5,7 +5,7 @@ import android.widget.*
 import androidx.core.content.ContextCompat
 
 fun HeadToast(
-    activity: Activity, message: String, duration: Int, gravity: Int,
+    activity: Activity, message: String, duration: Int,
     icon: Int,
     bordercolor:Int,
     background_bg:Int) {
