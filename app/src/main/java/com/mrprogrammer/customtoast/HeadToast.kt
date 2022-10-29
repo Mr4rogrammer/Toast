@@ -33,7 +33,6 @@ fun HeadToast(
     background.setBackgroundColor(ContextCompat.getColor(activity, background_bg))
 
     toast.apply {
-        setGravity(gravity, 0, 0)
         toast.duration = duration
         view = layout
         show()
