@@ -20,12 +20,13 @@ fun HeadToast(
 
 
     val images=layout.findViewById<ImageView>(R.id.image);
+
+
     val frame = layout.findViewById<FrameLayout>(R.id.button_accent_border);
     val background =layout.findViewById<RelativeLayout>(R.id.button_click_parent);
+    images.setImageDrawable(ContextCompat.getDrawable(activity, icon))
 
 
-
-        images.setImageDrawable(ContextCompat.getDrawable(activity, icon))
 
 
     frame.setBackgroundColor(ContextCompat.getColor(activity, bordercolor))
