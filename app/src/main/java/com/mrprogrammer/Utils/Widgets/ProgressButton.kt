@@ -7,18 +7,14 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import com.mrprogrammer.customtoast.R
+import com.mrprogrammer.Utils.R
 
 class ProgressButton : RelativeLayout{
     private lateinit var rootView : RelativeLayout
     private lateinit var textView : TextView
     private lateinit var progressBar: ProgressBar
-    private lateinit var cardView: CardView
     private var loaderColor = 0
-
     private var text = ""
-    private var isLoading = false
 
 
     constructor(context:Context): super(context) {
@@ -46,11 +42,9 @@ class ProgressButton : RelativeLayout{
     private fun initView(context: Context) {
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
         LayoutInflater.from(context).inflate(R.layout.progress_button,this,true)
-        rootView = findViewById(R.id.MainLayout)
-        textView = findViewById(R.id.text)
-        progressBar = findViewById(R.id.loader)
-        cardView = findViewById(R.id.login)
-
+        rootView = findViewById(R.id._mr_MainLayout)
+        textView = findViewById(R.id._mr_text)
+        progressBar = findViewById(R.id._mr_loader)
         if(text.isNotEmpty()) {
             textView.text = text
         }

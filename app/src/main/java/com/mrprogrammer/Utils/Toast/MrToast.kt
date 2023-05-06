@@ -3,7 +3,8 @@ package com.mrprogrammer.Utils.Toast
 import android.app.Activity
 import android.widget.*
 import androidx.core.content.ContextCompat
-import com.mrprogrammer.customtoast.R
+import com.mrprogrammer.Utils.R
+
 
 /**
  * Mr.Programmer
@@ -19,7 +20,6 @@ class MrToast {
     fun warning(activity: Activity, message: String, duration: Int = 0) {
         HeadToast(activity, message, duration,R.drawable.alert,R.color.warning_left,R.color.warning)
     }
-
 
 
     fun information(activity: Activity, message: String, duration: Int = 0) {

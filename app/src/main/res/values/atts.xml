@@ -4,5 +4,4 @@
         <attr name="mrtext" format="string"/>
         <attr name="mrloadercolor" format="color"/>
     </declare-styleable>
-
 </resources>
