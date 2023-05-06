@@ -24,15 +24,15 @@ class ProgressButton : RelativeLayout{
         initView(context)
     }
     constructor(context:Context,attrs:AttributeSet): super(context, attrs) {
-        getDataFromAtts(context,attrs)
+        getDataFromAttrs(context,attrs)
         initView(context)
     }
     constructor(context:Context,attrs:AttributeSet, defStyle: Int): super(context, attrs, defStyle) {
-        getDataFromAtts(context,attrs)
+        getDataFromAttrs(context,attrs)
         initView(context)
     }
 
-    private fun getDataFromAtts(context: Context,attrs: AttributeSet){
+    private fun getDataFromAttrs(context: Context,attrs: AttributeSet){
         val data = context.obtainStyledAttributes(attrs,R.styleable.ButtonWithLoader)
         text = data.getString(R.styleable.ButtonWithLoader_text).toString()
         loaderColor = data.getColor(R.styleable.ButtonWithLoader_loaderColor,context.resources.getColor(R.color.white))
