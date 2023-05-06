@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ButtonWithLoader">
+        <attr name="mrtext" format="string"/>
+        <attr name="mrloadercolor" format="color"/>
+    </declare-styleable>
+
+</resources>

@@ -1,4 +1,4 @@
-package com.mrprogrammer.customtoast
+package com.mrprogrammer.Utils
 
 import org.junit.Test
 
