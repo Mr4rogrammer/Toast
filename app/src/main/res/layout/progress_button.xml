@@ -10,28 +10,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#FF0000"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="3dp">
 
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/_mr_loader"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            />
-        <TextView
-            android:id="@+id/_mr_text"
+        <RelativeLayout
+            android:id="@+id/inner_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:text="Login with Google"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:id="@+id/_mr_loader"
+                android:layout_width="35dp"
+                android:progressTint="@color/white"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/_mr_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/dm_bold"
+                android:paddingBottom="15dp"
+                android:text="Login with Google"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

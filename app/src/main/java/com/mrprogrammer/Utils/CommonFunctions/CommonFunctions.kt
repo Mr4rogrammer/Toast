@@ -1,7 +1,6 @@
-package com.rjtech.shop.Utils
+package com.mrprogrammer.Utils.CommonFunctions
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.content.Intent
@@ -14,7 +13,7 @@ import java.util.*
 
 class CommonFunctions {
     companion object {
-        fun FirebaseClearString(aString: String?): String? {
+        fun firebaseClearString(aString: String?): String? {
             var aString = aString
             aString = aString?.replace("@", "")
             aString = aString?.replace(".", "")
@@ -78,5 +77,9 @@ class CommonFunctions {
             context.startActivity(intent)
         }
 
+        fun openUrlInBrowser(context: Context, url: String) {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            context.startActivity(intent)
+        }
     }
 }

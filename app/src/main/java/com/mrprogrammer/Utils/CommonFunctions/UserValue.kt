@@ -1,7 +1,6 @@
-package com.rjtech.shop.Utils
+package com.mrprogrammer.Utils.CommonFunctions
 
 import android.content.Context
-import com.mrprogrammer.Utils.CommonFunctions.LocalSharedPreferences
 
 class UserValue {
     companion object{
@@ -16,5 +15,7 @@ class UserValue {
         fun getUserImageUrl(context: Context):String{
             return LocalSharedPreferences.getLocalSavedUser(context)?.get(2).toString()
         }
+
+
     }
 }

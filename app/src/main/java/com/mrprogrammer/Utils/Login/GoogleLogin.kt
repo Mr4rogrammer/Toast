@@ -13,7 +13,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.mrprogrammer.Utils.Interface.LoginCompleteHandler
-import com.rjtech.shop.Utils.CommonFunctions
+import com.mrprogrammer.Utils.CommonFunctions.CommonFunctions
 import java.util.*
 
 
@@ -50,19 +50,18 @@ class GoogleLogin(val context:Context, val mAuth:FirebaseAuth, val  default_web_
         mAuth.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val user = mAuth.currentUser
-                val clearedEmailString: String? = CommonFunctions.FirebaseClearString(user!!.email)
+                val clearedEmailString: String? = CommonFunctions.firebaseClearString(user!!.email)
                 reference = FirebaseDatabase.getInstance().getReference("Userdata")
                 try {
                     if (clearedEmailString != null) {
                         reference?.child(clearedEmailString)?.child("Username")
                             ?.setValue(user.displayName)
                         reference?.child(clearedEmailString)?.child("Email")?.setValue(user.email)
-                        reference?.child(clearedEmailString)?.child("Imageurl")
-                            ?.setValue(Objects.requireNonNull(user.photoUrl).toString())
+                        reference?.child(clearedEmailString)?.child("Imageurl")?.setValue((user.photoUrl).toString())
                     }
                     handler.onSuccess(user)
                 } catch (e: Exception) {
-                    e.printStackTrace()
+                    handler.onFailure(e.message.toString())
                 }
             } else {
                 handler.onFailure(task.exception?.message.toString())
